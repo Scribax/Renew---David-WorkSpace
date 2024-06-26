@@ -1,0 +1,57 @@
+body{
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    font
+}
+
+.titulo{
+   border-style: solid;
+   border-color: black; 
+   font-family: Arial, Helvetica, sans-serif;  
+}
+.parrafo{
+    font-weight: 100;
+}
+.Fila{
+    border-style: solid;
+    border-color: black;
+    
+}
+
+.recuadro-login{
+    background-color: rgb(233, 122, 179);
+    width: 300px;
+    height: 400px;
+
+    opacity: 0.5;
+    border-radius: 15px;
+
+    /*para que quede centrado las siguientes 4 lineas*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+    
+}
+.imagen_sin_fondo{
+    /*border-color: black;
+    border-style: solid;
+    border-width: 5px;*/
+    scale: 50%;
+    position: absolute;
+    top: 5%;
+    left: 22%;
+    transform: translate(-50%,-50%)
+}
+.form-input{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.input-login{
+    height: 20px;
+    border-color: darkgray;
+    border-radius: 15px;
+    padding-left: 10px;
+}

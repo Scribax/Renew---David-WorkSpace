@@ -1,0 +1,18 @@
+Cambios y Correcciones
+
+archivo: app/__init__.py
+
+	ma = Marshmallow  -->  ma=Marshmallow()
+	
+
+ejecuté: 	flask db init
+		flask db migrate
+		flask db upgrade
+
+me anduvo pero solo me creo la tabla: alembic version
+
+el archivo /app/models/__init__.py le agregué:
+
+	from .cabanas import Cabana 
+		
+

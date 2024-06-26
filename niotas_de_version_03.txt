@@ -1,0 +1,8 @@
+hicimos la prueba de hacer una copia sin odificar nadade la carpeta 01, renombrarla cmo 03 y hacer un push a github y esto anduv. Luego
+intentamos hager un git push de la carpeta 01(SIN MODIFICAR NADA) y nos pide un git pull porque ya hay una version mas nueva (la 03)
+
+en esta version añadimos:
+
+- login.html
+- agregamos en app.py la funcion login form que lee del html y envia un mensaje si no se ha logeado
+  y si se loguea redirige a la pagina principal

@@ -1,0 +1,3 @@
+- tuve que borrar la linea de install pymsql porque aun comentada me lo instalaba
+- elegimos mysql-connector-python en vez de pymsql porque el primero es oficial
+- hay que instalar mysql-connector-python y mysqlclient porque se complementan con mas funcionalidades

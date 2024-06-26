@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Reservas de cabanas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="">
+
+</head>
+<body>
+    <div class="titulo">
+        <p class="parrafo">Reserva de Cabanas</p>
+
+    </div>
+    <div class="Tabla">
+        
+            <table>
+                <div class="Fila"></div> <!--es la primer fila de la tabla, los titulos -->
+                <tr>
+                    <th> Dia</th>
+                    <th> hab1</th>
+                    <th> hab2</th>
+                </tr>
+                </div>
+                <div class="Fila"></div> <!--es la primer fila de la tabla, los titulos -->
+                <tr>
+                    <th> Dia</th>
+                    <td> hab1</td>
+                    <td> hab2</td>
+                </tr>
+                <div class="Fila"></div> <!--es la primer fila de la tabla, los titulos -->
+                <tr>
+                    <th> {{dia}}</th>
+                    <td> hab1</td>
+                    <td> hab2</td>
+                </tr>
+                </div>
+                
+            </table>
+        
+    </div>
+</body>

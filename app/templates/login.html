@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Estilos específicos para este archivo HTML */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .recuadro-login {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .imagen_sin_fondo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .imagen_sin_fondo img {
+            width: 375px; /* Ajusta el tamaño de la imagen según sea necesario */
+            padding: 20;
+            display: block;
+            margin: 10 auto;
+        }
+        .form-input {
+            text-align: center;
+        }
+        .input-login {
+            width: 80%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .boton-ingresar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .boton-ingresar:hover {
+            background-color: #45a049;
+        }
+        .msg {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mostrar mensaje de error si existe -->
+    {% if msg %}
+    <p class="msg">{{ msg }}</p>
+    {% endif %}
+    
+    <div class="recuadro-login">
+        <h2 style="text-align: center;">Por favor inicia sesión</h2>
+        <div class="imagen_sin_fondo">
+            <img src="{{ url_for('static', filename='Logo.png') }}" alt="Logo">
+        </div>
+        <div class="form-input">
+            <form action="{{ url_for('loginForm') }}" method="POST">
+                <label for="usuario">Usuario</label><br>
+                <input class="input-login" type="text" id="usuario" name="usuario"><br><br>
+                
+                <label for="contraseña">Contraseña</label><br>
+                <input class="input-login" type="password" id="contraseña" name="contraseña"><br><br>
+                
+                <input class="boton-ingresar" type="submit" value="Ingresar">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
