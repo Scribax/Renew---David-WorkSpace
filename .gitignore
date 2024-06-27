@@ -1,0 +1,38 @@
+# Ignorar el entorno virtual
+venv/
+.venv/
+
+# Archivos de configuración sensibles
+.env
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos de compilación de C
+*.o
+*.so
+
+# Archivos de logs
+*.log
+
+# Archivos de bases de datos SQLite
+*.sqlite3
+
+# Archivos de cobertura de pruebas
+.coverage
+htmlcov/
+.coverage.*
+
+# Archivos de distribución
+dist/
+build/
+*.egg-info/
+
+# Otros
+*.bak
+*.swp
