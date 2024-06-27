@@ -6,7 +6,7 @@ from flask_marshmallow import Marshmallow
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
-from .config import factory
+from app.config import factory  # Ajustar la importación absoluta
 
 # Load .env file
 basedir = os.path.abspath(os.path.dirname(__file__))

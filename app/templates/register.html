@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión</title>
+    <title>Registro de Usuario</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
-        /* Estilos específicos para este archivo HTML */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -29,7 +28,7 @@
             margin-bottom: 20px;
         }
         .imagen_sin_fondo img {
-            width: 200px; /* Ajusta el tamaño de la imagen según sea necesario */
+            width: 200px;
             display: block;
             margin: 0 auto;
         }
@@ -76,7 +75,7 @@
 </head>
 <body>
     <div class="recuadro-registro">
-        <h2>Inicio de Sesión</h2>
+        <h2>Registro de Usuario</h2>
         <!-- Mostrar mensaje de error si existe -->
         {% if msg %}
             <p class="msg">{{ msg }}</p>
@@ -85,16 +84,16 @@
             <img src="{{ url_for('static', filename='Logo.png') }}" alt="Logo">
         </div>
         <div class="form-input">
-            <form action="{{ url_for('loginForm') }}" method="POST">
+            <form action="{{ url_for('register') }}" method="POST">
                 <label for="usuario">Nombre de Usuario</label><br>
                 <input class="input-registro" type="text" id="usuario" name="usuario" required><br><br>
                 
                 <label for="contraseña">Contraseña</label><br>
                 <input class="input-registro" type="password" id="contraseña" name="contraseña" required><br><br>
                 
-                <input class="boton-registrar" type="submit" value="Iniciar Sesión">
+                <input class="boton-registrar" type="submit" value="Registrar">
             </form>
-            <a href="{{ url_for('register') }}" class="link-login">¿No tienes cuenta? Regístrate</a>
+            <a href="{{ url_for('inicio') }}" class="link-login">Volver al Login</a>
         </div>
     </div>
 </body>
