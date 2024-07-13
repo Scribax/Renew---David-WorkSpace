@@ -13,7 +13,7 @@ class Cliente(db.Model):
     direcccion = str=db.Column('direccion',db.String(50))
     # por ahora no le vamos a guardar un passwor de cliente
     # password = str=db.Column('password',db.String(64)) # un hash varia entre 224 y 512 bits
-    provincia = str=db.Column('provincia',db.String(50))
+    provincia: str=db.Column('provincia',db.String(50))
     ciudad: str=db.Column('ciudad', db.String(50))
     notificaciones: bool=db.Column('notificaciones',db.Boolean())
 

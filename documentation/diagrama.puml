@@ -1,0 +1,56 @@
+@startuml
+entity "Usuario Administrador" as Admin {
+  *Usuario : string
+  *Contraseña : string
+  *Email : string
+  *Rol : string
+  *Fecha_Creacion : datetime
+  *Ultimo_Login : datetime
+}
+
+entity "Cabaña" as Cabin {
+  *Numero : int
+  *Nombre : string
+  *Capacidad : int
+  *Ubicacion : string
+  *Descripcion : string
+  *Precio : decimal
+  *Estado : string
+}
+
+entity "Cliente" as Client {
+  *Apellido : string
+  *Nombre : string
+  *DNI : string
+  *Email : string
+  *Telefono : string
+  *Direccion : string
+  *Provincia : string
+  *Ciudad : string
+  *Fecha_Nacimiento : date
+  *Notificaciones : boolean
+}
+
+entity "Pago" as Payment {
+  *Fecha_Pago : datetime
+  *Monto : decimal
+  *Tipo_Pago : string
+  *Reserva_ID : int
+  *Estado : string
+  *Referencia_Pago : string
+}
+
+entity "Reserva" as Reservation {
+  *Fecha_Inicio : datetime
+  *Fecha_Final : datetime
+  *Cliente_ID : int
+  *Cabaña_ID : int
+  *Estado : string
+  *Precio_Total : decimal
+  *Metodo_Reserva : string
+}
+
+Client }|..|{ Reservation
+Cabin }|..|{ Reservation
+Reservation }|--|{ Payment
+@enduml
