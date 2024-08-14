@@ -1,0 +1,49 @@
+**QUE ES CADA COSA**
+
+Patrones creacionales -> proporcionan varios mecanismos de creación de objetos que incrementan la flexibilidad y la reutilización del código existente.
+
+Tipos:
+FACTORY METHOD:proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.
+ABSTRACT FACTORY: Permite producir familias de objetos relacionados sin especificar sus clases concretas.
+BUILDER:Permite construir objetos complejos paso a paso. Este patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción
+SINGLETON:Permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.
+
+**SOLID**
+
+S[Single Responsibility Principle]: El Principio de Responsabilidad Única dice que una clase debe hacer una cosa y, por lo tanto, debe tener una sola razón para cambiar.
+O[Open-Closed Principle]:El principio de apertura y cierre exige que las clases deban estar abiertas a la extensión y cerradas a la modificación. Modificación significa cambiar el código de una clase existente y extensión significa agregar una nueva funcionalidad.
+L[Liskov Substitution Principle]:El Principio de Sustitución de Liskov establece que las subclases deben ser sustituibles por sus clases base.
+I[Interface Segregation Principle]:La segregación significa mantener las cosas separadas, y el Principio de Segregación de Interfaces se trata de separar las interfaces.
+D[Dependency Inversion Principle]:El principio de inversión de dependencia establece que nuestras clases deben depender de interfaces o clases abstractas en lugar de clases y funciones concretas.
+
+**KISS**
+El principio KISS (Keep It Simple, Stupid): mantenlo simple, estúpido. Establece que la mayoría de los sistemas funcionan mejor si se mantienen simples en lugar de hacerlos complejos.
+
+**DIRTY**
+
+DONDE ESTA CADA COSA
+
+El principio KISS se encuentra en la carpeta MODELS, cada una de estas clases cumplete con el requisito.
+
+He visto que usuario.py cumple con uno de los principios de SOLID. Principio de Responsabilidad Única (Single Responsibility Principle). Los métodos set_password y check_password se encargan de manejar la lógica relacionada con la gestión de contraseñas, lo que significa que la clase está enfocada en una única responsabilidad
+
+En la carpeta mapping también se encuentra el principio de responsabilidad unica
+
+templates -> config.py
+
+Tiene el principio Open/Closed [SOLID]: Las clases DevelopmentConfig y ProductionConfig extienden la clase base Config, lo que significa que puedes añadir configuraciones específicas para diferentes entornos sin modificar la clase base
+
+Ademas de presentar Single Responsibility Principle (SRP): La clase Config maneja configuraciones generales, mientras que las subclases manejan configuraciones específicas para cada entorno
+
+Y Liskov Substitution Principle (LSP), El LSP se respeta porque las subclases DevelopmentConfig y ProductionConfig pueden ser usadas en lugar de la clase base Config sin alterar el comportamiento esperado del programa.
+
+También encontramos DRY La configuración común se define en la clase base Config, y las subclases solo definen las diferencias específicas, lo cual evita duplicar código.
+
+También utiliza uno de los patrones de diseño, el factory method, La función factory(entorno: str), la función devuelve la clase de configuración correspondiente (DevelopmentConfig o ProductionConfig). Esto permite la creación de objetos configurados según el entorno sin especificar explícitamente qué clase debe instanciarse.
+
+
+ESTO SERIA LA CARPETA TEST:
+
+La función "créate.app()" no se si entraría en la parte de factoy method, porque esta crea una instancia de la aplicación
+
+Para no hacerla larga en todo los test se usa el Principio de Responsabilidad Única, el principio KISS y el factory method
