@@ -37,3 +37,6 @@ build/
 *.bak
 *.swp
 .DS_Store
+
+#ignorar las migraciones
+migrations/
