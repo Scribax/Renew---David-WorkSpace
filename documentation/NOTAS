@@ -7,7 +7,7 @@ FACTORY METHOD:proporciona una interfaz para crear objetos en una superclase, mi
 ABSTRACT FACTORY: Permite producir familias de objetos relacionados sin especificar sus clases concretas.
 BUILDER:Permite construir objetos complejos paso a paso. Este patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción
 SINGLETON:Permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.
-
+H
 **SOLID**
 
 S[Single Responsibility Principle]: El Principio de Responsabilidad Única dice que una clase debe hacer una cosa y, por lo tanto, debe tener una sola razón para cambiar.
