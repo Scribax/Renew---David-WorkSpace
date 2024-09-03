@@ -1,0 +1,6 @@
+ Repositories:
+ define el crud de los objetos
+ Services:
+ Aprovecha los services para definir ruta, metodos, etc
+
+

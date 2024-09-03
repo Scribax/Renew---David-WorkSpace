@@ -47,3 +47,9 @@ ESTO SERIA LA CARPETA TEST:
 La función "créate.app()" no se si entraría en la parte de factoy method, porque esta crea una instancia de la aplicación
 
 Para no hacerla larga en todo los test se usa el Principio de Responsabilidad Única, el principio KISS y el factory method
+
+
+Json wed token:
+
+Token: se pasa al traves del jider, En la line 15(requiriment)
+
