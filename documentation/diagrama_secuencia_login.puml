@@ -1,0 +1,14 @@
+@startuml "Diagrama"
+actor Usuario
+participant "Pantalla de Login" as Login
+participant Servidor
+participant "Base de Datos" as DB
+
+Usuario -> Login: Ingresa credenciales
+Login -> Servidor: Envía credenciales
+Servidor -> DB: Verifica credenciales
+DB --> Servidor: Resultado (éxito/error)
+Servidor --> Login: Resultado (éxito/error)
+Login --> Usuario: Muestra mensaje
+@enduml
+#Esta en testeo este diagrama, puede ser modificado debido a que no me muestra el diagrama. THANKS
