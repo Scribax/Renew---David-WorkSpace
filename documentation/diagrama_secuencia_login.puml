@@ -4,9 +4,9 @@ participant "Pantalla de Login" as Login
 participant Servidor
 participant "Base de Datos" as DB
 
-Usuario -> Login: Ingresa credenciales
-Login -> Servidor: Envía credenciales
-Servidor -> DB: Verifica credenciales
+Usuario -> Login: Ingresa datos
+Login -> Servidor: Envía datos
+Servidor -> DB: Verifica datos
 DB --> Servidor: Resultado (éxito/error)
 Servidor --> Login: Resultado (éxito/error)
 Login --> Usuario: Muestra mensaje
